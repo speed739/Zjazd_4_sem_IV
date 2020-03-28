@@ -13,12 +13,18 @@ namespace ConsoleApp1
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Computer>().Map(x =>
+            modelBuilder.Entity<PC>().Map(x =>
             {
                 x.MapInheritedProperties();
                 x.ToTable("Pecety");
-            }
-            );
+
+            });
+            
+            modelBuilder.Entity<Laptop>().Map(x =>
+            {
+                x.MapInheritedProperties();
+                x.ToTable("Laptopy");
+            });
         }
     }
 }

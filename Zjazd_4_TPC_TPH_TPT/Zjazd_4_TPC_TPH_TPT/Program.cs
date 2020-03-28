@@ -19,7 +19,7 @@ namespace ConsoleApp1
             //tpt.SaveChanges();
 
             var tpc = new TPC_Context();
-            tpc.Komputery.Add(new Laptop { Maufacture = "test", Description = "Chlodzenie_1" });
+            tpc.Komputery.Add(new PC { CoolingType = "test", Description = "Chlodzenie_1" });
             tpc.SaveChanges();
         }
     }
